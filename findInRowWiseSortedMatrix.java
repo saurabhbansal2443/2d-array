@@ -1,6 +1,6 @@
 public class findInRowWiseSortedMatrix {
     public static void main(String[] args) {
-        int[][] arr = {{11,21,22,23}
+        int[][] matrix = {{11,21,22,23}
                       ,{41,44,48,50}
                       ,{62,64,72,79}
                       ,{91,95,97,100}
@@ -9,19 +9,19 @@ public class findInRowWiseSortedMatrix {
         int k=11;
         
         int r=0;
-        int c=arr[0].length-1;
+        int c=matrix[0].length-1;
 
         int ra=-1;
         int ca=-1;
 
-        while(r<arr.length && c>=0){
-            if(k==arr[r][c]){
+        while(r<matrix.length && c>=0){
+            if(k==matrix[r][c]){
                 ra=r;
                 ca=c;
                 break;
-            }else if(k<arr[r][c]){
+            }else if(k<matrix[r][c]){
                 c--;
-            }else if(k>arr[r][c]){
+            }else if(k>matrix[r][c]){
                 r++;
             }
         }

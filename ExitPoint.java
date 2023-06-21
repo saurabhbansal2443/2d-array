@@ -1,6 +1,6 @@
 public class ExitPoint {
     public static void main(String[] args) {
-        int[][] arr = {{0,0,0,1,0}
+        int[][] matrix = {{0,0,0,1,0}
                       ,{0,0,1,0,1}
                       ,{0,1,0,1,0}
                       ,{0,0,0,0,0}};
@@ -12,7 +12,7 @@ public class ExitPoint {
 
           while(true){
 
-            dir = (dir+arr[r][c])%4;
+            dir = (dir+matrix[r][c])%4;
 
 
             if( dir ==0){
@@ -25,13 +25,13 @@ public class ExitPoint {
                 r--;
             }
 
-            if( r == arr.length){
+            if( r == matrix.length){
                 r--;
                 break;
             }else if ( r < 0){
                 r++;
                 break;
-            }else if ( c == arr[0].length){
+            }else if ( c == matrix[0].length){
                 c--;
                 break;
             }else if( c < 0){
